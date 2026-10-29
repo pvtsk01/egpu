@@ -71,10 +71,11 @@ module.exports = (req, res) => {
   const raw = req.query.path || '';
   const p = ('/' + raw).replace(/\/+$/, '').toLowerCase();
 
-  if (p === '/list') {
-    res.statusCode = 200;
-    return res.end(D.map(x => 'week' + x.w + ' - ' + x.t).join('\\n') + '\\n');
-  }
+ if (p === '/list') {
+  res.statusCode = 200;
+  return res.end(D.map(x => 'week' + x.w + ' - ' + x.t).join('\n') + '\n');
+}
+ 
 
  const m = p.match(/^\/week\/?(\d+)$/);
   const x = m && D.find(e => e.w === +m[1]);
