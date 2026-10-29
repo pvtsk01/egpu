@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/list",
+      "destination": "/api/route?path=list"
+    },
+    {
+      "source": "/week/:week",
+      "destination": "/api/route?path=week/:week"
+    }
+  ]
+}
