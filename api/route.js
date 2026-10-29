@@ -76,7 +76,7 @@ module.exports = (req, res) => {
     return res.end(D.map(x => 'week' + x.w + ' - ' + x.t).join('\\n') + '\\n');
   }
 
-  const m = p.match(/^\\/week\\/?(\\d+)$/);
+ const m = p.match(/^\/week\/?(\d+)$/);
   const x = m && D.find(e => e.w === +m[1]);
 
   if (x) {
