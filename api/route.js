@@ -69,7 +69,7 @@ const D = [
 module.exports = (req, res) => {
   res.setHeader('Content-Type', 'text/plain; charset=utf-8');
   const raw = req.query.path || '';
-  const p = ('/' + raw).replace(/\\/+$/,'').toLowerCase();
+  const p = ('/' + raw).replace(/\/+$/, '').toLowerCase();
 
   if (p === '/list') {
     res.statusCode = 200;
